@@ -1,0 +1,37 @@
+Actua como generador de datos realistas para un ATS (reclutamiento).
+
+Necesito EXACTAMENTE 100 candidatos ficticios para pruebas.
+
+Devuelveme SOLO un JSON valido (sin markdown, sin explicaciones, sin texto extra) con este formato exacto:
+
+[
+  {
+    "full_name": "Nombre Apellido",
+    "email": "nombre.apellido+001@demo.ats",
+    "phone": "+34 6XX XXX XXX",
+    "stage": "applied | screening | interview | offer | hired | rejected",
+    "salary_expectation": 45000,
+    "source": "LinkedIn | Referral | Indeed | Website | GitHub | InfoJobs"
+  }
+]
+
+Reglas obligatorias:
+1) 100 objetos exactos.
+2) Todos los emails deben ser unicos.
+3) Nombres realistas en espanol (mezcla de genero y apellidos variados).
+4) salary_expectation debe ser numero entero entre 22000 y 120000.
+5) stage debe distribuirse asi:
+   - applied: 28
+   - screening: 22
+   - interview: 20
+   - offer: 12
+   - hired: 10
+   - rejected: 8
+6) source debe distribuirse de forma realista (no todos iguales).
+7) No usar caracteres raros ni datos reales de personas.
+8) No repetir full_name mas de 2 veces.
+9) Respuesta final: SOLO JSON valido.
+
+Importante:
+- Mantener el orden de claves en cada objeto exactamente como aparece arriba.
+- No incluir campos adicionales.
